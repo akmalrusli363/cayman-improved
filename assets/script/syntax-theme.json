@@ -1,0 +1,86 @@
+[
+    {
+        "theme": "Hi! Mage - Hanaka",
+        "colors": {
+            "base00": "#130e3b",
+            "base01": "#39315a",
+            "base02": "#453c64",
+            "base03": "#847698",
+            "base04": "#c3afcb",
+            "base05": "#dcc6e0",
+            "base06": "#e5d3e0",
+            "base07": "#eddfe0",
+            "base08": "#f05086",
+            "base09": "#f0a03a",
+            "base0A": "#fff64b",
+            "base0B": "#a0d835",
+            "base0C": "#22faaa",
+            "base0D": "#3eaaf3",
+            "base0E": "#bb3ff2",
+            "base0F": "#e0a08f"
+        }
+    },
+    {
+        "theme": "Hi! Mage - Mageria",
+        "colors": {
+            "base00": "#1b1a21",
+            "base01": "#25252d",
+            "base02": "#514660",
+            "base03": "#67577a",
+            "base04": "#9c82a5",
+            "base05": "#d0acd0",
+            "base06": "#e1cede",
+            "base07": "#f1f0ec",
+            "base08": "#e64629",
+            "base09": "#fd823e",
+            "base0A": "#f2cf1f",
+            "base0B": "#aae629",
+            "base0C": "#62dda4",
+            "base0D": "#1dbaa4",
+            "base0E": "#e683a9",
+            "base0F": "#736c99",
+        }
+    },
+    {
+        "theme": "ChaniVibes",
+        "colors": {
+            "base00": "#151311",
+            "base01": "#1F1C19",
+            "base02": "#312D29",
+            "base03": "#4A453F",
+            "base04": "#69635B",
+            "base05": "#8F877C",
+            "base06": "#BCB1A3",
+            "base07": "#E8E2DA",
+            "base08": "#E2270E",
+            "base09": "#F4A128",
+            "base0A": "#E9BB01",
+            "base0B": "#8DB406",
+            "base0C": "#08B16B",
+            "base0D": "#067CC6",
+            "base0E": "#E63766",
+            "base0F": "#F4855C"
+        }
+    },
+    {
+        "theme": "ChaniVibes Light",
+        "colors": {
+            "base00": "#E8E2DA",
+            "base01": "#BCB1A3",
+            "base02": "#8F877C",
+            "base03": "#69635B",
+            "base04": "#4A453F",
+            "base05": "#312D29",
+            "base06": "#1F1C19",
+            "base07": "#151311",
+            "base08": "#E2270E",
+            "base09": "#F4A128",
+            "base0A": "#E9BB01",
+            "base0B": "#8DB406",
+            "base0C": "#08B16B",
+            "base0D": "#067CC6",
+            "base0E": "#E63766",
+            "base0F": "#F4855C"
+        }
+    }
+]
