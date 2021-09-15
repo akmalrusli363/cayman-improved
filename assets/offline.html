@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Lawn Services</title>
+    <link rel="stylesheet" href="./css/offline.css">
+</head>
+
+<body>
+    <div class="popup-offline">
+        <h1 class="huge">x_x</h1>
+        <h2>Oh no! This site is OFFLINE :((</h2>
+        <p>Lalala</p>
+        <a href="" onClick="reload" class="button">Reload or View fetched page</a>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function () {
+                    console.log("Service Worker Registered");
+                });
+        }
+
+        function reload() {
+            Location.reload();
+        }
+    </script>
+</body>
+
+</html>
