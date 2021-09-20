@@ -1,6 +1,3 @@
----
----
-
 /*
 Copyright 2015, 2019 Google Inc. All Rights Reserved.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,13 +22,7 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(CACHE_NAME);
     // Setting {cache: 'reload'} in the new request will ensure that the response
     // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-    cache.addAll(
-      [
-        "{{ '/assets/font/FredokaOne-Regular.otf?v=' | append: site.github.build_revision | relative_url }}",
-        "{{ '/sw.js?v=' | append: site.github.build_revision | relative_url }}",
-        OFFLINE_URL
-      ]
-    );
+    cache.addAll(OFFLINE_URL);
   })());
 });
 
