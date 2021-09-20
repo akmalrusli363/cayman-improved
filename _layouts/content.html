@@ -52,6 +52,16 @@
     </main>
   </body>
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register("{{ '/sw.js?v=' | append: site.github.build_revision | relative_url }}")
+        .then(function () {
+          console.log("Service Worker Registered");
+        });
+    }
+  </script>
+
   <script type="text/javascript" src="{{ '/assets/script/dark-switch.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 
   <script type="text/javascript" src="{{ '/assets/script/navigation.js?v=' | append: site.github.build_revision | relative_url }}"></script>
