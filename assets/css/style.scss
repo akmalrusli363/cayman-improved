@@ -46,7 +46,7 @@
   }
 }
 
-input, button {
+button, input, optgroup, select, textarea {
   color: $body-text-color;
   border: 1px solid $body-text-color;
   border-radius: .25rem;
