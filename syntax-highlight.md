@@ -88,19 +88,38 @@ public class Demo {
 
 ```python
 # Python class with syntax highlighting
+from random import randint
 import os
 
+class SomeClass:
+    """ dunno what I am doing """
+
+    def __init__(self):
+        pass
+
+    @property
+    def lucky_number(self):
+        return randint(0, 1000)
+
+def trigger(func):
+    def inner(a, b):
+        print("triggering a function with parameter '{0}' and '{1}'").format(a, b)
+        func()
+    return inner
+
+@trigger
 def some_function(param_one="", param_two=0):
     r'''A docstring'''
     if param_one > param_two: # interesting
         print("Greater")
     return (param_two - param_one + 1 + 0b10) or None
 
-class SomeClass:
-    """ dunno what I am doing """
-    
-    def __init__(self):
-        pass
+def print_lucky_number(nums, limit=1000):
+    for num in [randint(0, limit) for i in range(nums)]:
+        print("lucky number -> " + str(num))
+
+dicts = {"username": "@user", "status": None}
+dicts["status"] = "offline"
 ```
 
 ```yml
@@ -431,7 +450,7 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
    print_hi('Tom')
    #=> prints 'Hi, Tom' to STDOUT.
    ```
-        
+
 3. Now you can do this.
 
 
@@ -444,7 +463,7 @@ An example of a Gist embed below:
 You can use `defer=true` so that the loading of the gist doesn't prevent the loading of the page.
 
 ```html
-<script defer=true 
+<script defer=true
         src="https://gist.github.com/sylhare/dad7ed1ef3d13614c77c4ebadf8a11c3.js">
 </script>
 ```

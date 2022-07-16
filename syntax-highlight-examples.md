@@ -90,7 +90,7 @@ In a HTML page:
 
 <?php
 echo "Hello World!";
-?> 
+?>
 
 </body>
 </html>
@@ -130,6 +130,43 @@ class CreateTasksTable extends Migration
 }
 ```
 
+### Vue
+
+```vue
+// Vue with syntax highlighting
+<template>
+  <div id="app">
+    {{ message }}
+  </div>
+</template>
+
+<script lang=coffee>
+  app = new Vue
+    el: '#app'
+    data: { message: 'Hello Vue!' }
+</script>
+```
+
+### JSX (React)
+
+```jsx
+// JS XML embedded code with syntax highlighting
+import React from 'react'
+
+function CardName(props) {
+  return (
+    <div>Hello, {props.name}!</div>
+  )
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <CardName name="react-o-meter" />
+    )
+  }
+}
+```
 
 ## Common languages in art of programming
 
@@ -163,19 +200,38 @@ public class Demo {
 
 ```python
 # Python class with syntax highlighting
+from random import randint
 import os
 
+class SomeClass:
+    """ dunno what I am doing """
+
+    def __init__(self):
+        pass
+
+    @property
+    def lucky_number(self):
+        return randint(0, 1000)
+
+def trigger(func):
+    def inner(a, b):
+        print("triggering a function with parameter '{0}' and '{1}'").format(a, b)
+        func()
+    return inner
+
+@trigger
 def some_function(param_one="", param_two=0):
     r'''A docstring'''
     if param_one > param_two: # interesting
         print("Greater")
     return (param_two - param_one + 1 + 0b10) or None
 
-class SomeClass:
-    """ dunno what I am doing """
-    
-    def __init__(self):
-        pass
+def print_lucky_number(nums, limit=1000):
+    for num in [randint(0, limit) for i in range(nums)]:
+        print("lucky number -> " + str(num))
+
+dicts = {"username": "@user", "status": None}
+dicts["status"] = "offline"
 ```
 
 ### C/C++
@@ -225,16 +281,16 @@ int main() {
   push(32);
   printf("Current stacks: ");
   printStack(package);
-  
+
   pop();
   printf("Current stacks after pop: ");
   printStack(package);
-  
+
   push(84);
   push(8);
   printf("Current stacks after some push: ");
   printStack(package);
-  
+
   return 0;
 }
 ```
@@ -249,7 +305,7 @@ int main() {
   cout << "Enter a positive integer: ";
   cin >> n;
 
-  cout << "Factors of " << n << " are: ";  
+  cout << "Factors of " << n << " are: ";
   for(i = 1; i <= n; ++i) {
     if(n % i == 0)
       cout << i << " ";
@@ -619,7 +675,7 @@ Here's an example of an image, which is included using Markdown:
 ![Image of a glass on a book]({{ "/assets/img/pexels/book-glass.jpeg" | relative_url }})
 
 This is another example of list:
- 
+
  - list of things
    1. Sub list
    2. of Other things
@@ -630,7 +686,7 @@ This is another example of list:
        - and on ...
          - and on !
    - That's it.
-   
+
 ### Other subtitle
 
 Highlighting for code in Jekyll is done using Base16 or Rouge.
