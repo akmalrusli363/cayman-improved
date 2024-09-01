@@ -30,7 +30,8 @@
 
 div.highlighter-rouge,
 figure.highlight,
-.highlight code {
+.highlight code,
+code.language-mermaid {
   position: relative;
   color: var(--base05) !important;
   font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif;
@@ -44,6 +45,23 @@ figure.highlight,
     padding: 1em;
     border-color: var(--base02);
     background-color: var(--base00) !important;
+  }
+}
+
+// For compatibility, we temporarily use an main parent as parent of pre block element
+.main-content > pre, pre:has(code.language-mermaid) {
+  margin: 0;
+  padding: 1em;
+  border-color: var(--base02);
+  background-color: var(--base00) !important;
+
+  code.language-mermaid {
+    position: relative;
+    color: var(--base05) !important;
+    font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif;
+    font-size: 0.85em;
+    line-height: 1.3em;
+    border-radius: 0.3rem;
   }
 }
 
@@ -151,13 +169,13 @@ table.rouge-table {
 
   .gp { /* Generic.Prompt */
     color: var(--base04);
-    font-weight: bold; }
+  font-weight: bold; }
   .go { /* Generic.Output */
     color: var(--base04); }
 
   .gh { /* Generic.Heading */
     color: var(--base05);
-    font-weight: bold; }
+  font-weight: bold; }
   .gu { /* Generic.Subheading */
     color: var(--base0C);
     font-weight: bold; }
