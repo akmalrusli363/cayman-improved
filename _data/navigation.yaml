@@ -21,3 +21,9 @@
 
     - title: Using diff on Markdown
       url: tips/using-diff-on-markdown
+
+    - title: Fun with MathJaX
+      url: tips/mathjaxing
+
+    - title: Mermaid Diagram
+      url: tips/mermaid-diagram

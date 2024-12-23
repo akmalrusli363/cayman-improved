@@ -22,6 +22,8 @@
   --base0D: #{$base0D};
   --base0E: #{$base0E};
   --base0F: #{$base0F};
+  --background: #{$base00};
+  --border: #{$base02};
 }
 
 .highlighter-rouge .highlight {
@@ -48,12 +50,22 @@ code.language-mermaid {
   }
 }
 
+code.language-mermaid {
+  > pre,
+  pre.highlight {
+    margin: 0;
+    padding: 1em;
+    border-color: var(--border);
+    background-color: var(--background) !important;
+  }
+}
+
 // For compatibility, we temporarily use an main parent as parent of pre block element
 .main-content > pre, pre:has(code.language-mermaid) {
   margin: 0;
   padding: 1em;
-  border-color: var(--base02);
-  background-color: var(--base00) !important;
+  border-color: var(--border);
+  background-color: var(--background) !important;
 
   code.language-mermaid {
     position: relative;

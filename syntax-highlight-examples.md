@@ -706,3 +706,55 @@ while (j < 20) {
 }
 ```
 ~~~
+
+## You can do with graph as well!
+
+If you want to do with graph by your code, do with "Mermaid", a notative language which process syntaxes as graph. Syntax highlighting in Mermaid immediately show processed graph taken from written graph syntax. Take it for one or two examples:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
+sequenceDiagram
+  participant dotcom
+  participant iframe
+  participant viewscreen
+  dotcom->>iframe: loads html w/ iframe url
+  iframe->>viewscreen: request template
+  viewscreen->>iframe: html & javascript
+  iframe->>dotcom: iframe ready
+  dotcom->>iframe: set mermaid data on iframe
+  iframe->>iframe: render mermaid
+```
+
+Or you can highlight for git branching as well:
+
+```mermaid
+gitGraph
+  commit
+  commit
+  branch development
+  checkout development
+  commit
+  branch develop/abby
+  branch develop/ruby
+  checkout develop/ruby
+  commit
+  commit
+  checkout develop/abby
+  commit
+  checkout development
+  merge develop/ruby
+  commit
+  checkout develop/ruby
+  commit
+  checkout develop/abby
+  merge development
+```
+
+**Note:** The mermaid graph displayed here has dark/light theme support. Be wise while graph will reload on theme changes.
